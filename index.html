@@ -8,7 +8,16 @@
 </head>
 <body>
   <form name="addForm">
-    <input class="input-task">
+    <input class="input-task" id="input-task" placeholder="Введите задачу">
+    <h3>Таймер для задачи</h3>
+    <div class="timer">
+      <input class="day-input timer-input" type="number" value="0" id="day-input">
+      <label class="label" for="day-input">Дни</label>
+      <input class="hour-input timer-input" type="number" value="0" id="hour-input">
+      <label class="label" for="hour-input">Часы</label>
+      <input class="minute-input timer-input" type="number" value="0" id="minute-input">
+      <label class="label" for="minute-input">Минуты</label>
+    </div>
     <button class="submit-task" type="submit">Добавить задачу</button>
   </form>  
     <div class="tasks">

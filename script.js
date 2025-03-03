@@ -1,8 +1,11 @@
-const BASE_URL = '';
+const BASE_URL = 'https://ca0ca26afdb72df07d4d.free.beeceptor.com/api/';
 const addForm = document.forms.addForm;
 const buttonForm = document.querySelector('.submit-task');
 const inputTask = document.querySelector('.input-task');
 const listTasks = document.querySelector('.tasks-list');
+const dayTimer= document.querySelector('day-input');
+const hourTimer= document.querySelector('hour-input');
+const minuteTimer= document.querySelector('minute-input');
 let taskId = '';
 let taskCompleted = '';
 
@@ -22,16 +25,22 @@ addForm.addEventListener ('submit', (event) => {
   inputTask.value = '';
 })
 
-async function createTasks(title, completed) {
+async function createTasks(title, completed,day, hour, minute) {
   const task = {
     title,
-    completed
+    completed,
+    timer: {
+      day,
+      hour,
+      minute
+    }
   }
   return fetch(BASE_URL, {
     method: "POST",
     body: JSON.stringify(task)
   })
 }
+
 
 async function deleteTask(id) {
   return fetch(`${BASE_URL}${id}`, {
@@ -74,6 +83,16 @@ async function renderTasks() {
     }
     newString.prepend(newTask,newEdit,newDelete);
 
+    const newTimer = document.createElement('div');
+    const newDay = document.createElement('div');
+    const newHour = document.createElement('div');
+    const newMinute= document.createElement('div');
+    newDay.textContent = task.timer.day;
+    newHour.textContent = task.timer.hour;
+    newMinute.textContent = task.timer.minute;
+    newString.prepend(newTimer);
+    newTimer.prepend(newDay,newHour,newMinute)
+
     newDelete.addEventListener('click', () => {
       deleteTask(task.id).then(() => renderTasks());
     })
@@ -96,3 +115,4 @@ async function renderTasks() {
     })
   });
 }
+

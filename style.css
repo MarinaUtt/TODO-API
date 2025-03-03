@@ -16,6 +16,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 form{
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 500px;
   margin: 0 auto;
   padding-top: 30px;
@@ -30,6 +33,20 @@ form{
   font-weight: 500;
 }
 
+.timer-input{
+  width: 40px;
+  border: 1px #162EAE solid;
+}
+
+h3{
+  color: #162EAE;
+  margin: 20px 0 10px 0;
+}
+
+.label{
+  margin-right: 20px;
+}
+
 .submit-task{
   width: 150px;
   height: 30px; 
@@ -37,6 +54,7 @@ form{
   background-color: #162EAE;
   font-size: 12px;
   font-weight: 500;
+  margin-top: 10px;
 }
 
 .tasks{
