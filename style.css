@@ -66,7 +66,7 @@ h3{
 }
 
 .title{
-  width: 350px;
+  width: 550px;
   height: 30px;
   color: white;
   background-color: #00A779;
@@ -81,14 +81,13 @@ h2{
 }
 
 .tasks-list{
-  width: 350px;
+  width: 550px;
   height: 500px;
   border: 1px solid #00A779;
 }
 
 .task{
   position: relative;
-  width: 100%;
   font-size: 12px;
   font-weight: 500;
   padding-left: 30px ;
@@ -113,9 +112,11 @@ h2{
 }
 
 .string{
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 20px;
+  
 }
  
 .delete{
@@ -127,9 +128,87 @@ h2{
 }
 
 .edit{
+  position: absolute;
+  right: 30px;
   content: '';
   width: 15px;
   height: 15px;
   background: url(image/edit.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
+
+.timer{
+  position: absolute;
+  display: flex;
+  width: 200px;
+  right: 80px;
+}
+
+.timer-item{
+  margin: 0 auto;
+  padding-right: 20px;
+}
+
+.day-timer{
+  position: relative;
+}
+
+.day-timer::after{
+  position: absolute;
+  content: 'days';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.hour-timer{
+  position: relative;
+}
+
+.hour-timer::after{
+  position: absolute;
+  content: 'hours';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.minute-timer{
+  position: relative;
+}
+
+.minute-timer::after{
+  position: absolute;
+  content: 'minutes';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.second-timer{
+  position: relative;
+}
+
+.second-timer::after{
+  position: absolute;
+  content: 'seconds';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.timer-start{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url(image/play.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
+
+.timer-pause{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url(image/pause.svg) no-repeat center / contain;
   padding-right: 30px;
 }
