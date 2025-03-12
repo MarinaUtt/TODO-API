@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TODO</title>
+</head>
+<body>
+  <form name="addForm">
+    <input class="input-task" id="input-task" placeholder="Введите задачу">
+    <h3>Таймер для задачи</h3>
+    <div class="timer-form">
+      <input class="day-input timer-input" type="number" id="day-input" value="0">
+      <label class="label" for="day-input">Дни</label>
+      <input class="hour-input timer-input" type="number" id="hour-input" value="0">
+      <label class="label" for="hour-input">Часы</label>
+      <input class="minute-input timer-input" type="number"  id="minute-input" value="0">
+      <label class="label" for="minute-input">Минуты</label>
+    </div>
+    <button class="submit-task" type="submit">Добавить задачу</button>
+  </form>  
+    <div class="tasks">
+      <div>
+        <div class="title">
+          <h2 class="to-title">Задачи</h2>  
+        </div> 
+        <div class="tasks-list">
+        </div>
+      </div> 
+  
+  <script src="script.js"></script>  
+</body>
+</html>

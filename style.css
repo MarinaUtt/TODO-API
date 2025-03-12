@@ -1,0 +1,214 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%; min-width: $minwidth; line-height:1;font-size:14px; font-family:$fontfamily; -ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{"Montserrat", sans-serif;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+form{
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.input-task{
+  width: 300px;
+  height: 30px;
+  border: 1px solid #162EAE;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.timer-input{
+  width: 40px;
+  border: 1px #162EAE solid;
+}
+
+h3{
+  color: #162EAE;
+  margin: 20px 0 10px 0;
+}
+
+.label{
+  margin-right: 20px;
+}
+
+.submit-task{
+  width: 150px;
+  height: 30px; 
+  color: white;
+  background-color: #162EAE;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.tasks{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.title{
+  width: 550px;
+  height: 30px;
+  color: white;
+  background-color: #00A779;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2{
+  padding: 8px 0 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tasks-list{
+  width: 550px;
+  height: 500px;
+  border: 1px solid #00A779;
+}
+
+.task{
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 30px ;
+}
+
+.task-do{
+  text-decoration: line-through;
+}
+
+.task::before{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+  content: '';
+  left: 10px;
+}
+
+.task-do::before{
+  background: url(image/check-mark.svg) no-repeat center / contain;
+}
+
+.string{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  
+}
+ 
+.delete{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url(image/delete.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
+
+.edit{
+  position: absolute;
+  right: 30px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url(image/edit.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
+
+.timer{
+  position: absolute;
+  display: flex;
+  width: 200px;
+  right: 80px;
+}
+
+.timer-item{
+  margin: 0 auto;
+  padding-right: 20px;
+}
+
+.day-timer{
+  position: relative;
+}
+
+.day-timer::after{
+  position: absolute;
+  content: 'days';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.hour-timer{
+  position: relative;
+}
+
+.hour-timer::after{
+  position: absolute;
+  content: 'hours';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.minute-timer{
+  position: relative;
+}
+
+.minute-timer::after{
+  position: absolute;
+  content: 'minutes';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.second-timer{
+  position: relative;
+}
+
+.second-timer::after{
+  position: absolute;
+  content: 'seconds';
+  bottom: -10px;
+  left: 0;
+  font-size: 8px;
+}
+
+.timer-start{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url(image/play.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
+
+.timer-pause{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url(image/pause.svg) no-repeat center / contain;
+  padding-right: 30px;
+}
